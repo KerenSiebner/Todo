@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <title>Todo MVC</title>
+</head>
+
+<body onload="onInit()">
+    <div class="container">
+        <h1>To do List</h1>
+
+        <div class="todo-action">  
+            <h5>Filter:</h5>
+            <section class="todo-filter">
+                <select onchange="onSetFilter(this.value)">
+                    <option value="all">All</option>
+                    <option value="done">Done</option>
+                    <option value="active">Active</option>
+                </select>
+            </section>
+            <h5>Sort:</h5>
+            <section class="todo-sort">
+                <select onchange="onSetSort(this.value)">
+                    <option value="txt">Text</option>
+                    <option value="time">Date created</option>
+                    <option value="importance">Importance</option>
+                </select>
+            </section>
+            <h5>Add:</h5>
+            <form onsubmit="onAddTodo(event)">
+                <input type="text" name="todo-txt" placeholder="What to do?" />
+                <h5>Importance:</h5>
+                <select type="importance" name="todo-imprt"  >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <button>Add</button>
+            </form>
+        </div>
+    
+    
+        <ul class="todo-list">
+        </ul>
+    
+        <section class="todo-stat">
+            <h4>Total to do's: &nbsp<span class="total-todos"></span> </h4>
+            <h4>Active to do's: &nbsp<span class="active-todos"></span> </h4>
+        </section>
+    </div>
+
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/todo-service.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+
+</html>

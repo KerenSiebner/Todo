@@ -1,0 +1,61 @@
+body{
+    font-family: Quicksand;
+    font-size: 1.2em;;
+}
+h1 {
+    text-align: center;
+}
+h5{
+    margin:0;
+    margin-right: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    background-color:  rgba(174, 209, 255, 0.378);
+    direction: ltr;
+    margin-top: 100px;
+}
+
+.todo-action {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(179, 212, 255, 0.798);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.todo-filter {
+    padding-right: 50px;
+    padding-left: 0;
+}
+.todo-sort {
+    padding-right: 100px;
+}
+
+.todo-stat {
+    background-color: rgb(110, 133, 164);
+    color:white;
+    padding-left: 25px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-right:125px;
+}
+
+.todo-stat span {
+    font-size: 20px;
+}
+
+button, select, input {
+    font-family: inherit;
+}
+
